@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+	<title>Анкета новичка</title>
+	<style type="text/css">
+		body{
+			border: none;
+			background-color: #e9f4fb;
+			font-family: 'Montserrat', sans-serif;
+		}
+		.container{
+			position: relative;
+			padding: 50px;
+			margin: 50px auto;
+			width: 550px;
+			
+			background-color: white;
+			border-radius: 8px;
+			box-sizing: border-box;
+			border: 2px solid #fe5800;
+		}
+		
+		/* Заголовок */
+		.container h1{
+			text-align: center;
+			color: black;}
+		/* Поля ввода данных */
+		.container .input{
+			display: block;
+			height: 25px;
+			width: 100%;
+			border-radius: 4px;
+			border: 1px solid #e9f4fb;
+			margin-top: 5px;
+			outline: none;
+
+		}
+		.container .input:focus{
+			border: 1px solid #fe5800;
+			background: none;
+			box-shadow: 1px 5px 10px -5px #8cccf5;
+			transition: all 0.5s;
+		}
+		.container label{
+			display: block;
+			color: black;
+			font-size: 14px;
+			padding-left: 10px;
+		}
+		.container textarea{
+			border: 1px solid #e9f4fb;
+			width: 100%;
+			max-width: 100%;
+			max-height: 200px;
+			min-width: 70%;
+			min-height: 100px;
+			margin-top: 5px;
+			border-radius: 4px;
+		}
+		.container textarea:focus{
+			border: 1px solid #fe5800;
+			background: none;
+			box-shadow: 1px 5px 10px -5px #8cccf5;
+			transition: all 0.5s;
+		}
+		/* Кнопка "Отправить" */
+		.input[type=submit] {
+			position: absolute;
+		    background-color: #fe5800;
+		    border: none;
+		    color: white;
+		    font-size: 15px;
+		    text-decoration: none;
+		    margin-left: 100px;
+		    cursor: pointer;
+		    border-radius: 6px;
+		    width: 250px;
+		    height: 35px;
+		}
+		.input[type=submit]:hover{
+			background-color: white;
+			color:black;
+			border: 2px solid #fe5800;
+			font-size: 18px;
+			
+			transition: all 1s;
+		}
+		/* Иконки и место для них */
+		.input[type=text] {
+			padding-left: 25px;
+		}
+		textarea {
+			padding-left: 25px;
+			outline: none;
+		}
+        .container {
+            display: none;
+        }
+	
+
+	</style>
+</head>
+<body>
+    <button onclick="onLoginModalWindow()">кнопка</button>
+	<div class="container ">		
+		<form class="modal-form">
+			<!-- Заголовок -->
+<h1>Анкета новичка </h1>
+            <button onclick="offLoginModalWindow()">X</button>
+			<!-- Имя -->
+			<p><label for="name">Имя:</label>			<input class="input" size="30" id="name" type="text" name="name" placeholder="Введите Ваше имя" value=""></p>
+			
+			<p><label for="name">Фамилия:</label>			<input class="input" size="30" id="name" type="text" name="name" placeholder="Введите Вашу Фамилию" value=""></p>
+			
+			<!-- Email -->
+			<p><label for="mail">Ваш email:</label>
+			<input class="input" size="30" id="mail" type="text" name="mail" placeholder="Введите адрес Вашей почты" value=""></p>
+			
+			<!-- Телефон -->
+			<p><label for="telephone">Ваш телефон:</label>
+			<input class="input" size="30" id="telephone" type="text" name="telephone" placeholder="Введите номер телефона" value=""></p>
+			
+			<p><label for="age">Укажите свой возраст:</label>
+			<input type="radio" name="age" value="1" checked>до 18<br>
+			<input type="radio" name="age" value="1">18-25 лет<br>
+			<input type="radio" name="age" value="1">Старше 25 лет</p>
+
+			<p><input class="input" type="submit" value="Отправить"></p>
+
+		</form>
+	</div>
+<script>    
+var modalWindow;
+  var background;
+  function onLoginModalWindow() {
+    modalWindow = document.querySelector('.container');
+    modalWindow.style.display = 'block';
+//    background = document.querySelector('.main-container');
+//    background.style.filter = "blur(10px)";
+  }  
+  function offLoginModalWindow() {
+    modalWindow = document.querySelector('.container');
+    modalWindow.style.display = 'none';
+//    background = document.querySelector('.main-container');
+//    background.style.filter = "none";
+  }     
+</script>
+</body>
+</html>
+
+
+<!--
+  <div class="login-modal-window-wrapper">
+    <div class="login-modal-window">
+      <button class="login-modal-window__close-button" onclick="offLoginModalWindow()">x</button>
+      <h2 class="login-modal-window__title">Авторизуйтесь</h2>   
+      <form class="login-form">
+        <div class="login-form__user-data">       
+          <input class="login-form__input login-form__login" id="user-name" type="text" name="user-name" placeholder="Логин" required>  
+          <input class="login-form__input login-form__password" id="user-password" type="password" name="user-password" placeholder="Пароль" required> 
+        </div>
+        <p class="login-form__help">
+          Забыли логин или пароль? <a href="#">Напомним!</a>
+        </p>
+        <button class="login-form__submit-button">
+          &rarr;
+        </button>
+      </form>    
+    </div>
+  </div>
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- inline block
+меньше ширину блока -->
